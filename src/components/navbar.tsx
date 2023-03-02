@@ -1,30 +1,22 @@
 import Link from "next/link";
 import React from "react";
-import {
-  FaGithub,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-  FaHome,
-  FaUserAlt,
-  FaRegAddressCard,
-} from "react-icons/fa";
-
+import { FaHome, FaUserAlt, FaLaptopCode } from "react-icons/fa";
+import { RiSuitcaseLine } from "react-icons/ri";
 export const Navbar = () => {
   return (
-    <div className="w-4/12 flex items-center bg-black/20 backdrop-blur-3xl z-50 hover:scale-105 justify-around h-14 mb-4  rounded-3xl absolute top-0">
+    <nav className="w-4/12 flex items-center mx-auto bg-black/20 backdrop-blur-3xl z-50 justify-around h-14 mb-4  rounded-3xl  top-0">
       <Link href="/">
         <FaHome className="text-2xl hover:scale-125 text-white" />
       </Link>
-      <Link href="/">
-        <FaUserAlt className="text-2xl  hover:text-cyan-400	 hover:scale-125 text-white" />
+      <Link href="/about">
+        <FaUserAlt className="text-2xl hover:scale-125 text-white" />
       </Link>
       <Link href="/">
-        <FaRegAddressCard className="text-2xl hover:text-cyan-400 hover:scale-125 text-white" />
+        <FaLaptopCode className="text-2xl hover:scale-125 text-white" />
       </Link>
       <Link href="/">
-        <FaInstagram className="text-2xl hover:text-red-900 hover:scale-125 text-white" />
+        <RiSuitcaseLine className="text-2xl hover:scale-125 text-white" />
       </Link>
-    </div>
+    </nav>
   );
 };
